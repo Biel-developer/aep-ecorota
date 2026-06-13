@@ -1,0 +1,17 @@
+import { DOMException } from 'domexception';
+
+global.DOMException = DOMException;
+
+import React from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { StatusBar } from 'expo-status-bar';
+import AppNavigator from './src/navigation/AppNavigator';
+
+export default function App() {
+  return (
+    <SafeAreaProvider>
+      <StatusBar style="light" backgroundColor="#2E7D32" />
+      <AppNavigator />
+    </SafeAreaProvider>
+  );
+}
